@@ -15,7 +15,7 @@ h1 {
     color:steelblue;
 }
 
-main img {
+img {
     width:150px;
     height:auto;
     border:1px solid steelblue;
@@ -50,7 +50,7 @@ aside h2{
     position:absolute;
     top: 47px;
     left: 150px;
-    
+
 }
 
 aside img{
