@@ -10,6 +10,19 @@ nav a{
     padding:20px;
 }
 
+.button{
+    background-color: #f39e00;
+    border: none;
+    color: black;
+    padding: 24px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 4px;
+    cursor: pointer;
+  }
+}
 
 h1 {
     color:steelblue;
