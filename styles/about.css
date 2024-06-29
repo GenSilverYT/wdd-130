@@ -19,6 +19,7 @@ nav a{
 }
 
 button img{
+    width: 48px;
     background-color: #f39e00;
     border: none;
     color: black;
