@@ -1,5 +1,5 @@
 img {
-    width:24px;
+    width:240px;
     height:auto;
     border:1px solid steelblue;
     padding:2px;
@@ -18,7 +18,7 @@ nav a{
     padding:20px;
 }
 
-button{
+button img{
     background-color: #f39e00;
     border: none;
     color: black;
