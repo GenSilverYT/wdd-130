@@ -1,0 +1,32 @@
+img {
+    width:24px;
+    height:auto;
+    border:1px solid steelblue;
+    padding:2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+}
+nav {
+    background-color: steelblue;
+    padding: 10px;
+}
+
+
+nav a{
+    color:white;
+    display:block;
+    padding:20px;
+}
+
+button{
+    background-color: #f39e00;
+    border: none;
+    color: black;
+    padding: 24px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 4px;
+    cursor: pointer;
+  }
