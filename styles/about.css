@@ -31,3 +31,7 @@ button img{
     margin: 4px 4px;
     cursor: pointer;
   }
+
+div {
+    text-align: center;
+}
