@@ -38,6 +38,14 @@ img {
     float: right;
 }
 
+.logo{
+    width:240px;
+    height:auto;
+    border:1px solid steelblue;
+    padding:2px;
+    box-shadow: 0 0 30px gray;
+    float: left;  
+}
 
 p{
     padding:10px;
