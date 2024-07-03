@@ -102,7 +102,10 @@ aside{
     color: #333;
     text-align:left;
     display: inline-block;
+    grid-column: auto;
+    grid-row: auto;
 }
+
 
 aside h2{
     position:absolute;
