@@ -15,7 +15,7 @@ nav a{
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    
+
 }
 
 button{
@@ -73,6 +73,8 @@ main {
     background-color: #eee;
     color: #333;
     text-align:left;
+    grid-column: 2/3;
+    margin:1rem;
 }
 
 
@@ -86,6 +88,9 @@ aside{
     text-align:left;
     display: inline-block;
     align-content: center;
+    grid-column: 1/2;
+    position:relative;
+    grid-row: 1/2;
 }
 
 .temple{
@@ -114,12 +119,19 @@ aside img{
     box-shadow: 0 0 30px gray;
 }
 
-header, footer{
+header, .grid, footer{
     margin-top:15px;
     border-top:1px solid #000;
     text-align:center;
     
 }
+
+.grid{
+    display:grid;
+    align-items: center;
+}
+
+
 
 li{
     margin: 0;
