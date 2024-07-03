@@ -104,10 +104,8 @@ aside{
     display: inline-block;
     justify-content: space-evenly;
     align-items: center;
-    position:relative;
-    grid-column: 1/2;
+    grid-column: 2/4;
    
-    grid-row: 1/2;
 }
 
 
