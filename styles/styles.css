@@ -153,7 +153,7 @@ li{
     color: #000;
 }
 
-ul, .grid{
+ul{
     align-content: center;
     grid-column: 3;
     position:relative;
