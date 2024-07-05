@@ -97,7 +97,7 @@ aside .main{
     width:auto;
     margin: auto;
     border:1px solid rgba(0, 0, 0, 0.2);
-    padding: auto;
+    padding: 1rem;
     background-color: #eee;
     color: #333;
     text-align:left;
@@ -107,14 +107,14 @@ aside .main{
 }
 
 
-aside h2{
+aside .main h2{
     position:absolute;
     top: 47px;
     left: 150px;
 
 }
 
-aside img{
+aside .main img{
     width:200px;
     height:auto;
     border:1px solid steelblue;
