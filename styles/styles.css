@@ -150,7 +150,7 @@ li{
     background-color: #ddd;
     color: #000;
 }
-ul{
+ul, .grid{
     align-content: center;
     grid-column: 3;
     position:relative;
