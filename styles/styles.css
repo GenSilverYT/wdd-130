@@ -87,7 +87,10 @@ aside{
     color: #333;
     text-align:left;
     display: inline-block;
-    
+    align-content: center;
+    grid-column: 1/2;
+    position:relative;
+    grid-row: 1/2;
 }
 
 .temple{
@@ -99,7 +102,6 @@ aside{
     color: #333;
     text-align:left;
     display: inline-block;
-    
     
    
 }
@@ -150,6 +152,7 @@ li{
     background-color: #ddd;
     color: #000;
 }
+
 ul, .grid{
     align-content: center;
     grid-column: 3;
