@@ -78,7 +78,7 @@ main {
 }
 
 
-aside{
+aside .main{
     width:40rem;
     margin: 1rem;
     border:1px solid rgba(0, 0, 0, 0.2);
@@ -97,7 +97,7 @@ aside{
     width:auto;
     margin: auto;
     border:1px solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    padding: auto;
     background-color: #eee;
     color: #333;
     text-align:left;
