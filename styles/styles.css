@@ -157,7 +157,6 @@ ul{
     align-content: center;
     grid-column: 3;
     position:relative;
-    grid-row: 5;
     justify-content: space-evenly;
    
 }
