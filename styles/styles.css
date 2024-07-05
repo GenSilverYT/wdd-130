@@ -87,10 +87,7 @@ aside{
     color: #333;
     text-align:left;
     display: inline-block;
-    align-content: center;
-    grid-column: 1/2;
-    position:relative;
-    grid-row: 1/2;
+    
 }
 
 .temple{
@@ -153,4 +150,10 @@ li{
     padding:1rem;
     background-color: #ddd;
     color: #000;
+}
+ul{
+    align-content: center;
+    grid-column: 3;
+    position:relative;
+    grid-row: 5;
 }
