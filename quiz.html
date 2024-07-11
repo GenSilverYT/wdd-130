@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and CSS Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+    <meta charset ="utf-8">
+    <meta name="description" content="HTML and CSS Quiz Page">
+    <meta name="author" content="Asher DeCrescenzo">
+</head>
+<body>
+<div class="quiz-container">
+  <h2>HTML and CSS Quiz</h2>
+  <form action="quiz-results.php" method="post">
+    
+    <div class="question">
+      <p>1. What does HTML stand for?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+        <label><input type="radio" name="q1" value="b"> Hyperlinks and Text Markup Language</label>
+        <label><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
+        <label><input type="radio" name="q1" value="d"> None of the above</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>2. Which HTML tag is used to define an internal style sheet?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> &lt;style&gt;</label>
+        <label><input type="radio" name="q2" value="b"> &lt;css&gt;</label>
+        <label><input type="radio" name="q2" value="c"> &lt;script&gt;</label>
+        <label><input type="radio" name="q2" value="d"> &lt;link&gt;</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>3. In CSS, what is the correct syntax for referring to an ID with the name "intro"?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> #intro</label>
+        <label><input type="radio" name="q3" value="b"> .intro</label>
+        <label><input type="radio" name="q3" value="c"> *intro</label>
+        <label><input type="radio" name="q3" value="d"> intro</label>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>4. Which HTML attribute is used to define inline styles?</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> style</label>
+        <label><input type="radio" name="q4" value="b"> font</label>
+        <label><input type="radio" name="q4" value="c"> class</label>
+        <label><input type="radio" name="q4" value="d"> styles</label>
+      </div>
+    </div>
+
+    <button type="submit">Submit Quiz</button>
+  </form>
+</div>
+</body>
+</html>
