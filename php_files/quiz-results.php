@@ -22,3 +22,13 @@
         return false; // Prevent form submission
     }
     </script>
+
+    <!-- quiz_results.php -->
+
+<?php
+// Process form data and display results here
+?>
+
+<p>Thank you for completing the quiz!</p>
+
+<a href="quiz.html">Back to Quiz</a>
