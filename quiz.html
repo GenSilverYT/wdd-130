@@ -71,9 +71,15 @@
   <script>
     function showResults() {
     // Open a new window with quiz_results.php
-        window.open('quiz_results.php', 'Quiz Results', 'width=400,height=300');
-        return false; // Prevent default form submission
+    var newWindow = window.open('quiz_results.php', 'Quiz Results', 'width=600,height=400');
+    
+    // Focus on the new window if it's already opened
+    if (window.focus) {
+        newWindow.focus();
     }
+    
+    return false; // Prevent default form submission
+}
     function checkResults() {
         var correctAnswers = ["a", "a", "b", "b"]; // Replace with correct answers
 
