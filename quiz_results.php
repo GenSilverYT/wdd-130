@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/quiz.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiz Results</title>
 </head>
@@ -39,7 +37,12 @@ echo "<p>You answered $correctCount out of $totalQuestions questions correctly.<
 echo "<p>Your score: " . round($percentage, 2) . "%</p>";
 ?>
 
-<p><a href="quiz.html">Try Again?</a></p>
+<script>
+// Close the pop-up window after 5 seconds (optional)
+setTimeout(function() {
+    window.close();
+}, 5000);
+</script>
 
 </body>
 </html>
