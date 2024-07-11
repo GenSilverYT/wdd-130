@@ -1,34 +1,45 @@
-<script>
-    function checkAnswers() {
-        var correctAnswers = ["a", "a", "b", "b"]; // Replace with correct answers
-    
-        var form = document.getElementById("quizForm");
-        var score = 0;
-    
-        for (var i = 0; i < form.elements.length - 1; i++) { // -1 to exclude the submit button
-            var element = form.elements[i];
-            if (element.type === "radio" && element.checked) {
-                if (element.value === correctAnswers[i]) {
-                    score++;
-                    element.parentNode.style.color = "green"; // Mark correct answer
-                } else {
-                    element.parentNode.style.color = "red"; // Mark incorrect answer
-                }
-            }
-        }
-    
-        alert("You scored " + score + " out of " + correctAnswers.length);
-    
-        return false; // Prevent form submission
-    }
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/quiz.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Results</title>
+</head>
+<body>
 
-    <!-- quiz_results.php -->
+<h2>Quiz Results</h2>
 
 <?php
-// Process form data and display results here
+// Define the correct answers array
+$correctAnswers = array(
+    "q1" => "a",
+    "q2" => "a",
+    "q3" => "b",
+    "q4" => "b"
+);
+
+// Initialize variables to count correct answers
+$correctCount = 0;
+$totalQuestions = count($correctAnswers);
+
+// Check each answer submitted via POST method
+foreach ($correctAnswers as $question => $correctOption) {
+    if (isset($_POST[$question]) && $_POST[$question] === $correctOption) {
+        $correctCount++;
+    }
+}
+
+// Calculate percentage of correct answers
+$percentage = ($correctCount / $totalQuestions) * 100;
+
+// Output results
+echo "<p>You answered $correctCount out of $totalQuestions questions correctly.</p>";
+echo "<p>Your score: " . round($percentage, 2) . "%</p>";
 ?>
 
-<p>Thank you for completing the quiz!</p>
+<p><a href="quiz.html">Try Again?</a></p>
 
-<a href="quiz.html">Back to Quiz</a>
+</body>
+</html>
