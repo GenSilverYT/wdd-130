@@ -24,7 +24,7 @@
 <body>
 <div class="quiz-container">
   <h2>HTML and CSS Quiz</h2>
-  <form id="quizForm" action="quiz_results.php" method="post" onsubmit="return showResults()">
+  <form id="quizForm" action="quiz_results.php" method="post" onsubmit="return showResults()" onsubmit="return checkResults()">
     
     <div class="question">
       <p>1. What does HTML stand for?</p>
@@ -68,15 +68,37 @@
 
     <button type="submit">Submit Quiz</button>
   </form>
-
-</div>
-   <script>
+  <script>
     function showResults() {
     // Open a new window with quiz_results.php
-    window.open('quiz_results.php', 'Quiz Results', 'width=400,height=300');
-    return false; // Prevent default form submission
+        window.open('quiz_results.php', 'Quiz Results', 'width=400,height=300');
+        return false; // Prevent default form submission
+    }
+    function checkResults() {
+        var correctAnswers = ["a", "a", "b", "b"]; // Replace with correct answers
+
+        var form = document.getElementById("quizForm");
+        var score = 0;
+
+        for (var i = 0; i < form.elements.length - 1; i++) { // -1 to exclude the submit button
+            var element = form.elements[i];
+            if (element.type === "radio" && element.checked) {
+                if (element.value === correctAnswers[i]) {
+                    score++;
+                    element.parentNode.style.color = "green"; // Mark correct answer
+                } else {
+                    element.parentNode.style.color = "red"; // Mark incorrect answer
+                }
+            }
+        }
+
+        alert("You scored " + score + " out of " + correctAnswers.length);
+
+        return false; // Prevent form submission
     }
     </script> 
+</div>
+   
 </body>
 <nav>
     <button class="button"><a href="index.html">Home</a></button>
