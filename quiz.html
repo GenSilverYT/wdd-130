@@ -66,43 +66,50 @@
       </div>
     </div>
 
-    <button type="submit">Submit Quiz</button>
+    <input type="button" value="Submit" onclick="checkQuiz()" class="submit-btn">
   </form>
-  <script>
-    function showResults() {
-    // Open a new window with quiz_results.php
-    var newWindow = window.open('quiz_results.php', 'Quiz Results', 'width=600,height=400');
-    
-    // Focus on the new window if it's already opened
-    if (window.focus) {
-        newWindow.focus();
-    }
-    
-    return false; // Prevent default form submission
-}
-    function checkResults() {
-        var correctAnswers = ["a", "a", "b", "b"]; // Replace with correct answers
+</div>
 
-        var form = document.getElementById("quizForm");
-        var score = 0;
+<script>
+  function checkQuiz() {
+      // Define correct answers
+      const answers = {
+          'q1': 'a',
+          'q2': 'a',
+          'q3': 'a',
+          'q4': 'a'
+      };
 
-        for (var i = 0; i < form.elements.length - 1; i++) { // -1 to exclude the submit button
-            var element = form.elements[i];
-            if (element.type === "radio" && element.checked) {
-                if (element.value === correctAnswers[i]) {
-                    score++;
-                    element.parentNode.style.color = "green"; // Mark correct answer
-                } else {
-                    element.parentNode.style.color = "red"; // Mark incorrect answer
-                }
-            }
-        }
+      // Get submitted answers
+      const form = document.getElementById('quizForm');
+      let submittedAnswers = {};
+      for (let i = 0; i < form.elements.length; i++) {
+          const element = form.elements[i];
+          if (element.type === 'radio' && element.checked) {
+              submittedAnswers[element.name] = element.value;
+          }
+      }
 
-        alert("You scored " + score + " out of " + correctAnswers.length);
+      // Calculate total questions and correct answers
+      const totalQuestions = Object.keys(answers).length;
+      let correctAnswers = 0;
+      for (const question in answers) {
+          if (answers.hasOwnProperty(question) && answers[question] === submittedAnswers[question]) {
+              correctAnswers++;
+          }
+      }
 
-        return false; // Prevent form submission
-    }
-    </script> 
+      // Calculate percentage
+      const percentage = (correctAnswers / totalQuestions) * 100;
+
+      // Prepare and display pop-up message
+      const message = `Quiz Results:\nTotal Questions: ${totalQuestions}\nCorrect Answers: ${correctAnswers}\nPercentage: ${percentage.toFixed(2)}%`;
+      alert(message);
+
+      // Reset form (optional)
+      form.reset();
+  }
+  </script>
 </div>
    
 </body>
