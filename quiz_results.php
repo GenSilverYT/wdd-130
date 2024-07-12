@@ -9,42 +9,47 @@
 </head>
 <body>
 
-<h2>Quiz Results</h2>
-
 <?php
-// Define the correct answers array
-$correctAnswers = array(
-    "q1" => "a",
-    "q2" => "a",
-    "q3" => "b",
-    "q4" => "b"
+// Correct answers
+$answers = array(
+    'q1' => 'a',
+    'q2' => 'a',
+    'q3' => 'a',
+    'q4' => 'a'
 );
 
-// Initialize variables to count correct answers
-$correctCount = 0;
-$totalQuestions = count($correctAnswers);
+// Submitted answers
+$submitted_answers = array(
+    'q1' => isset($_POST['q1']) ? $_POST['q1'] : '',
+    'q2' => isset($_POST['q2']) ? $_POST['q2'] : '',
+    'q3' => isset($_POST['q3']) ? $_POST['q3'] : '',
+    'q4' => isset($_POST['q4']) ? $_POST['q4'] : ''
+);
 
-// Check each answer submitted via POST method
-foreach ($correctAnswers as $question => $correctOption) {
-    if (isset($_POST[$question]) && $_POST[$question] === $correctOption) {
-        $correctCount++;
+// Calculate total questions and correct answers
+$total_questions = count($answers);
+$correct_answers = 0;
+
+// Check answers
+foreach ($answers as $question => $correct_answer) {
+    if (isset($submitted_answers[$question]) && $submitted_answers[$question] === $correct_answer) {
+        $correct_answers++;
     }
 }
 
-// Calculate percentage of correct answers
-$percentage = ($correctCount / $totalQuestions) * 100;
+// Calculate percentage
+$percentage = ($correct_answers / $total_questions) * 100;
 
-// Output results
-echo "<p>You answered $correctCount out of $totalQuestions questions correctly.</p>";
-echo "<p>Your score: " . round($percentage, 2) . "%</p>";
+// Prepare pop-up message
+$popup_message = "<script>";
+$popup_message .= "alert('Quiz Results:\\n";
+$popup_message .= "Total Questions: $total_questions\\n";
+$popup_message .= "Correct Answers: $correct_answers\\n";
+$popup_message .= 'Percentage: ' . number_format($percentage, 2) . '%\\n';
+$popup_message .= "');";
+$popup_message .= "window.location.href = 'index.html';";
+$popup_message .= "</script>";
+
+// Output pop-up message
+echo $popup_message;
 ?>
-
-<script>
-// Close the pop-up window after 5 seconds (optional)
-setTimeout(function() {
-    window.close();
-}, 5000);
-</script>
-
-</body>
-</html>
