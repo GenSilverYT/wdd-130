@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/about.css">
+        <link rel="stylesheet" href="styles/gaming.css">
         <meta charset ="utf-8">
         <meta name="viewport" content="width=device-witdth,initial-scale=1.0">
         <title>Asher DeCrescenzo | WDD 130</title>
@@ -31,6 +32,84 @@
             
         </main>
 
+       
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <h1>Gaming Adventures</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <section id="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong> 123 Gaming Rd, Adventureville, CA</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>Email:</strong> info@gamingadventures.com</p>
+                    <!-- Embedded Google Map -->
+                    <div id="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.8957815933423!2d-82.32604008480114!3d29.65163468198222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e7743b9c27b6c5%3A0x599cc0a70f2efb5f!2sRafting%20Adventures%20Inc!5e0!3m2!1sen!2sus!4v1623712205731!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </section>
+    
+                <section id="employee-profiles">
+                    <h2>Our Team</h2>
+                    <div class="employee">
+                        <img src="employee1.jpg" alt="Employee 1">
+                        <p><strong>John Doe</strong><br>Guide</p>
+                    </div>
+                    <div class="employee">
+                        <img src="employee2.jpg" alt="Employee 2">
+                        <p><strong>Jane Smith</strong><br>Customer Support</p>
+                    </div>
+                    <div class="employee">
+                        <img src="employee3.jpg" alt="Employee 3">
+                        <p><strong>Michael Johnson</strong><br>Operations Manager</p>
+                    </div>
+                </section>
+    
+                <section id="contact-form">
+                    <h2>Contact Form</h2>
+                    <form action="submit_form.php" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="purpose">Purpose of Message:</label>
+                        <select id="purpose" name="purpose">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Reservation Question">Reservation Question</option>
+                            <option value="Website Suggestion">Website Suggestion</option>
+                        </select>
+    
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+    
+                        <label>
+                            <input type="checkbox" name="newsletter" value="subscribe">
+                            Please subscribe me to the monthly newsletter
+                        </label>
+    
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    
+        <!-- Footer -->
         <nav>
             <button class="button"><a href="index.html">Home</a></button>
             <button class="button"><a href="about.html">About Us</a></button>
@@ -40,6 +119,11 @@
             <button class="button"><a href="quiz.html">HTML & CSS Quiz</a></button>
         </nav>
         <footer>
+            <div class="container">
+                <p>&copy; 2024 Rafting Adventures | All rights reserved</p>
+                <p>Wireframe design: <a href="link-to-your-wireframe-image" target="_blank">View Wireframe</a></p>
+            </div>
+        </footer>
             <p>©2024 🏔 Asher Decrescenzo 🏔 Denver, Colorado</p>
         </footer>
     </body>
